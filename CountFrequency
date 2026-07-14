@@ -1,0 +1,24 @@
+public class Main {
+    public static void main(String[] args) {
+      int arr[]={1,4,5,5,2,4,3};
+      for(int i=0;i<arr.length;i++){
+        boolean found=false;
+        for(int j=0;j<i;j++){
+          if(arr[i]==arr[j]){
+            found=true;
+            break;
+          }
+        }
+        if(found){
+          continue;
+        }
+        int freq=0;
+        for(int j=0;j<arr.length;j++){
+          if(arr[i]==arr[j]){
+            freq++;
+          }
+        }
+        System.out.println(arr[i]+"=>"+freq);
+      }
+    }
+}
