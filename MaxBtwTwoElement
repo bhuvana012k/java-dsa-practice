@@ -1,0 +1,32 @@
+O(n²)
+public static void main(String[] args) {
+      int arr[]={7,5,9,1};
+      int maxdiffrence=0;
+      int diffrence=0;
+      for(int i=0;i<arr.length;i++){
+        for(int j=i+1;j<arr.length;j++){
+          diffrence=arr[j]-arr[i];
+          if(diffrence>maxdiffrence){
+          maxdiffrence=diffrence;
+        }
+        }
+      }
+      System.out.print(maxdiffrence);
+    }
+O(N)
+public static void main(String[] args) {
+      int arr[]={7,5,9,1};
+int minimum=arr[0];
+      int maxdiffrence=0;
+      int diffrence=0;
+      for(int i=1;i<arr.length;i++){
+          diffrence=arr[i]-minimum;
+          if(diffrence>maxdiffrence){
+          maxdiffrence=diffrence;
+        }
+        if(arr[i]<minimum){
+          minimum=arr[i];
+        }
+      }
+      System.out.print(maxdiffrence);
+    }
